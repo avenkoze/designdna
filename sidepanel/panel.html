@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DesignDNA</title>
+  <link rel="stylesheet" href="panel.css" />
+</head>
+<body>
+  <header class="top">
+    <div class="brand">
+      <span class="brand-mark">◧</span>
+      <span class="brand-name">Design<span class="brand-accent">DNA</span></span>
+    </div>
+    <div class="site" id="siteMeta" hidden>
+      <img id="siteFavicon" class="site-favicon" alt="" />
+      <div class="site-text">
+        <div class="site-host" id="siteHost"></div>
+        <div class="site-date" id="siteDate"></div>
+      </div>
+    </div>
+  </header>
+
+  <div class="actions">
+    <button id="analyzeBtn" class="btn-primary">
+      <span class="btn-label">Analyze this page</span>
+    </button>
+  </div>
+
+  <div id="status" class="status" hidden>
+    <div class="status-inner">
+      <span class="spinner" id="statusSpinner" hidden></span>
+      <span id="statusText"></span>
+    </div>
+  </div>
+
+  <main id="results" hidden>
+    <details open class="section" id="sec-colors">
+      <summary>Colors</summary>
+      <div class="section-body" id="colorsBody"></div>
+    </details>
+
+    <details open class="section" id="sec-typography">
+      <summary>Typography</summary>
+      <div class="section-body" id="typographyBody"></div>
+    </details>
+
+    <details class="section" id="sec-spacing">
+      <summary>Spacing</summary>
+      <div class="section-body" id="spacingBody"></div>
+    </details>
+
+    <details class="section" id="sec-motion">
+      <summary>Motion</summary>
+      <div class="section-body" id="motionBody"></div>
+    </details>
+
+    <details class="section" id="sec-layout">
+      <summary>Layout</summary>
+      <div class="section-body" id="layoutBody"></div>
+    </details>
+
+    <details class="section" id="sec-details">
+      <summary>Details</summary>
+      <div class="section-body" id="detailsBody"></div>
+    </details>
+
+    <details class="section" id="sec-tokens">
+      <summary>Design Tokens</summary>
+      <div class="section-body" id="tokensBody"></div>
+    </details>
+  </main>
+
+  <footer id="exportBar" class="export-bar" hidden>
+    <button class="btn-export" id="exportMd">Copy Markdown Brief</button>
+    <button class="btn-export" id="exportJson">Copy JSON</button>
+    <button class="btn-export" id="exportPrompt">Copy AI Prompt</button>
+  </footer>
+
+  <div id="toast" class="toast" hidden></div>
+
+  <script src="analyzer.js"></script>
+  <script src="../export/markdown.js"></script>
+  <script src="../export/json.js"></script>
+  <script src="../export/prompt.js"></script>
+  <script src="panel.js"></script>
+</body>
+</html>
