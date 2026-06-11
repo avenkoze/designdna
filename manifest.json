@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "DesignDNA",
+  "version": "0.1.0",
+  "version_name": "0.1.0-beta",
+  "description": "Extract the complete design DNA of any website — colors, typography, spacing, motion — as an AI-ready style brief.",
+  "permissions": ["sidePanel", "scripting", "activeTab", "storage"],
+  "host_permissions": ["<all_urls>"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "Open DesignDNA"
+  },
+  "side_panel": {
+    "default_path": "sidepanel/panel.html"
+  }
+}
